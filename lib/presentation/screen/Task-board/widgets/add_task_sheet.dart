@@ -79,7 +79,6 @@ class _AddTaskSheetState extends State<AddTaskSheet> {
                   );
                   return;
                 }
-                final dueString = dueDate?.toIso8601String();
                 await context.read<TaskBoardCubit>().addTask(
                   content: content,
                   duration: null,

@@ -9,8 +9,10 @@ part 'comment_model.g.dart';
 abstract class CommentModel with _$CommentModel {
   const factory CommentModel({
     required String id,
+    // ignore: invalid_annotation_target
     @JsonKey(name: 'task_id') required String taskId,
     required String content,
+    // ignore: invalid_annotation_target
     @JsonKey(name: 'posted_at') required String postedAt,
   }) = _CommentModel;
 

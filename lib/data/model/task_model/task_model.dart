@@ -1,7 +1,6 @@
 // lib/data/model/task_model/task_model.dart
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:kanban_app/core/enums/TaskStatus.dart';
-import 'package:kanban_app/domain/entities/tasks/task.depreciated.dart';
 import 'package:kanban_app/domain/entities/tasks/task_entity.dart';
 
 part 'task_model.freezed.dart';
@@ -12,9 +11,13 @@ abstract class TaskModel with _$TaskModel {
   const factory TaskModel({
     required String id,
     required String content,
+    // ignore: invalid_annotation_target
     @JsonKey(name: 'duration') @Default(0) int? duration,
+    // ignore: invalid_annotation_target
     @JsonKey(name: 'comment_count') required int commentCount,
+    // ignore: invalid_annotation_target
     @JsonKey(name: 'deadline') required TaskDeadlineDto? deadline,
+    // ignore: invalid_annotation_target
     @JsonKey(name: 'created_at') required String createdAt,
   }) = _TaskModel;
 
